@@ -1,44 +1,37 @@
-const { DataTypes } = require('sequelize')
-const sequelize = require('../database/index')
+const { DataTypes } = require("sequelize");
+const sequelize = require("../database/index");
 
-const Student = sequelize.define('Student', {
+const Student = sequelize.define("Student", {
     studentname: {
         type: DataTypes.STRING,
-        allowNull: false
-    }, 
+        allowNull: false,
+    },
     discordid: {
         type: DataTypes.STRING,
-        allowNull:false
+        allowNull: false,
     },
 
     email: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
 
     password: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
 
     role: {
         type: DataTypes.STRING,
-        allowNull: false
-    },
-
-    birthday: {
-        type: DataTypes.DATE,
-        allowNull: true
+        allowNull: false,
     },
 
     github: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true,
     },
 
-    // add a teamid foreign key 
-
+    // add a teamid foreign key
 });
-
 
 module.exports = Student;
